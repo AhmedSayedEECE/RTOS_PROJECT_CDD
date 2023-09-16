@@ -1,0 +1,36 @@
+\doxysection{MNVIC\+\_\+interface.\+h}
+\hypertarget{_m_n_v_i_c__interface_8h_source}{}\label{_m_n_v_i_c__interface_8h_source}\index{SourceCode/MNVIC\_interface.h@{SourceCode/MNVIC\_interface.h}}
+\mbox{\hyperlink{_m_n_v_i_c__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{\ /******************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Module:\ NVIC}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Module\ ID:\ N/A}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ File\ Name:\ MNVIC\_interface.h}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ Description:\ NVIC\ Driver}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Author:\ Ahmed\ Sayed}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ ******************************************************************************/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#ifndef\ MNVIC\_INTERFACE\_H}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ MNVIC\_INTERFACE\_H}}
+\DoxyCodeLine{00082\ \textcolor{keyword}{typedef}\ u8\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_abe12b50199d48a88648d81678987c1ed}{MNVIC\_SetPriorityGrouping}}(u32\ CopyU8GroupingOptions);}
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_aacbf1fdccdddb1aec1a2560aa12a3eca}{MNVIC\_EnableIRQ}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Enable\ IRQn*/}}
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a5a3f0a57f4a3313a32aeac0d9f3b3621}{MNVIC\_DisableIRQ}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Disable\ IRQn*/}}
+\DoxyCodeLine{00088\ u32\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a02ab26a49d9fa1f0b649054542e6061e}{MNVIC\_GetPendingIRQ}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);\textcolor{comment}{/*Return\ true(IRQ-\/Number)\ if\ IRQn\ is\ pending*/}}
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_acf016607f7c8de7ef79144123de61b13}{MNVIC\_SetPendingIRQ}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);}
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_ab8dc73133adc1d2ecbdc9ca9ff46abca}{MNVIC\_ClearPendingIRQ}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);\ \textcolor{comment}{/*Clear\ IRQn\ pending\ status*/}}
+\DoxyCodeLine{00091\ u32\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a012034aff1ab2f95f3b70ca23c84f3e1}{MNVIC\_GetActive}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);\ \textcolor{comment}{/*Return\ the\ IRQ\ number\ of\ the\ active\ interrupt\ */}}
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_af7760305cac07aadd2b8682598eca9f6}{MNVIC\_SetPriority}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn,\ u8\ CopyU8Priority);}
+\DoxyCodeLine{00093\ u32\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a0b29a7522626c6fef056879338f739d5}{MNVIC\_GetPriority}}(\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\_t}}\ IRQn);\ \textcolor{comment}{/*Read\ priority\ of\ IRQn*/}}
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_m_n_v_i_c__interface_8h_afd98f352747fc3a3233aac95f9fef951}{MNVIC\_SystemReset}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{/*Reset\ the\ system*/}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,382 @@
+\doxysection{Source\+Code/\+MNVIC\+\_\+interface.h File Reference}
+\hypertarget{_m_n_v_i_c__interface_8h}{}\label{_m_n_v_i_c__interface_8h}\index{SourceCode/MNVIC\_interface.h@{SourceCode/MNVIC\_interface.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{_m_n_v_i_c__interface_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef u8 \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_abe12b50199d48a88648d81678987c1ed}{MNVIC\+\_\+\+Set\+Priority\+Grouping}} (u32 Copy\+U8\+Grouping\+Options)
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_aacbf1fdccdddb1aec1a2560aa12a3eca}{MNVIC\+\_\+\+Enable\+IRQ}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a5a3f0a57f4a3313a32aeac0d9f3b3621}{MNVIC\+\_\+\+Disable\+IRQ}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+u32 \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a02ab26a49d9fa1f0b649054542e6061e}{MNVIC\+\_\+\+Get\+Pending\+IRQ}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_acf016607f7c8de7ef79144123de61b13}{MNVIC\+\_\+\+Set\+Pending\+IRQ}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_ab8dc73133adc1d2ecbdc9ca9ff46abca}{MNVIC\+\_\+\+Clear\+Pending\+IRQ}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+u32 \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a012034aff1ab2f95f3b70ca23c84f3e1}{MNVIC\+\_\+\+Get\+Active}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_af7760305cac07aadd2b8682598eca9f6}{MNVIC\+\_\+\+Set\+Priority}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn, u8 Copy\+U8\+Priority)
+\item 
+u32 \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a0b29a7522626c6fef056879338f739d5}{MNVIC\+\_\+\+Get\+Priority}} (\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}} IRQn)
+\item 
+void \mbox{\hyperlink{_m_n_v_i_c__interface_8h_afd98f352747fc3a3233aac95f9fef951}{MNVIC\+\_\+\+System\+Reset}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}\label{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!IRQn\_t@{IRQn\_t}}
+\index{IRQn\_t@{IRQn\_t}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{IRQn\_t}{IRQn\_t}}
+{\footnotesize\ttfamily typedef u8 \mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_m_n_v_i_c__interface_8h_ab8dc73133adc1d2ecbdc9ca9ff46abca}\label{_m_n_v_i_c__interface_8h_ab8dc73133adc1d2ecbdc9ca9ff46abca} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_ClearPendingIRQ@{MNVIC\_ClearPendingIRQ}}
+\index{MNVIC\_ClearPendingIRQ@{MNVIC\_ClearPendingIRQ}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_ClearPendingIRQ()}{MNVIC\_ClearPendingIRQ()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+Clear\+Pending\+IRQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Clear\+Pending\+IRQ\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Clear IRQ Pending Flag.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x06\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Clear NVIC Handler Pending Flag.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_3}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_4}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_a5a3f0a57f4a3313a32aeac0d9f3b3621}\label{_m_n_v_i_c__interface_8h_a5a3f0a57f4a3313a32aeac0d9f3b3621} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_DisableIRQ@{MNVIC\_DisableIRQ}}
+\index{MNVIC\_DisableIRQ@{MNVIC\_DisableIRQ}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_DisableIRQ()}{MNVIC\_DisableIRQ()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+Disable\+IRQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Disable\+IRQ\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Disable NVIC IRQ.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x03\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Disable NVIC Handler.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_9}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_10}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_aacbf1fdccdddb1aec1a2560aa12a3eca}\label{_m_n_v_i_c__interface_8h_aacbf1fdccdddb1aec1a2560aa12a3eca} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_EnableIRQ@{MNVIC\_EnableIRQ}}
+\index{MNVIC\_EnableIRQ@{MNVIC\_EnableIRQ}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_EnableIRQ()}{MNVIC\_EnableIRQ()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+Enable\+IRQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Enable\+IRQ\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Enable NVIC IRQ.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x02\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Enable NVIC Handler.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_15}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_16}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_a012034aff1ab2f95f3b70ca23c84f3e1}\label{_m_n_v_i_c__interface_8h_a012034aff1ab2f95f3b70ca23c84f3e1} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_GetActive@{MNVIC\_GetActive}}
+\index{MNVIC\_GetActive@{MNVIC\_GetActive}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_GetActive()}{MNVIC\_GetActive()}}
+{\footnotesize\ttfamily u32 MNVIC\+\_\+\+Get\+Active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Get\+Active\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Get Active Flag value.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x07\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+Active Flag IRQ Status\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Get Selected Interrupt Active flag status .\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_21}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_22}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_a02ab26a49d9fa1f0b649054542e6061e}\label{_m_n_v_i_c__interface_8h_a02ab26a49d9fa1f0b649054542e6061e} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_GetPendingIRQ@{MNVIC\_GetPendingIRQ}}
+\index{MNVIC\_GetPendingIRQ@{MNVIC\_GetPendingIRQ}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_GetPendingIRQ()}{MNVIC\_GetPendingIRQ()}}
+{\footnotesize\ttfamily u32 MNVIC\+\_\+\+Get\+Pending\+IRQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Get\+Pending\+IRQ\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Get Pending Flag value.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x04\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+Pending Flag IRQ Status\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Get Selected Interrupt pending flag status .\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_27}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_28}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_a0b29a7522626c6fef056879338f739d5}\label{_m_n_v_i_c__interface_8h_a0b29a7522626c6fef056879338f739d5} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_GetPriority@{MNVIC\_GetPriority}}
+\index{MNVIC\_GetPriority@{MNVIC\_GetPriority}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_GetPriority()}{MNVIC\_GetPriority()}}
+{\footnotesize\ttfamily u32 MNVIC\+\_\+\+Get\+Priority (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Get\+Priority\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Get IRQ Priority.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x09\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+Priority of The IRQ\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Get NVIC Handler IRQ Priority.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_33}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_34}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_acf016607f7c8de7ef79144123de61b13}\label{_m_n_v_i_c__interface_8h_acf016607f7c8de7ef79144123de61b13} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_SetPendingIRQ@{MNVIC\_SetPendingIRQ}}
+\index{MNVIC\_SetPendingIRQ@{MNVIC\_SetPendingIRQ}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_SetPendingIRQ()}{MNVIC\_SetPendingIRQ()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+Set\+Pending\+IRQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Set\+Pending\+IRQ\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Set IRQ Pending Flag.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x05\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Set NVIC Handler Pending Flag.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_39}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_40}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_af7760305cac07aadd2b8682598eca9f6}\label{_m_n_v_i_c__interface_8h_af7760305cac07aadd2b8682598eca9f6} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_SetPriority@{MNVIC\_SetPriority}}
+\index{MNVIC\_SetPriority@{MNVIC\_SetPriority}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_SetPriority()}{MNVIC\_SetPriority()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+Set\+Priority (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_n_v_i_c__interface_8h_a907599c325d40311d5703005b1ae8147}{IRQn\+\_\+t}}}]{IRQn,  }\item[{u8}]{Copy\+U8\+Priority }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Set\+Priority\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Set IRQ Priority.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x08\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IRQn} & (IRQn\+\_\+t)\textbackslash{}\+Interrupt Handler ID \\
+\hline
+\mbox{\texttt{ in}}  & {\em Copy\+U8\+Priority} & (u8)\textbackslash{}\+Priority Chosen \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Set NVIC Handler IRQ Priority.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_45}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_46}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_abe12b50199d48a88648d81678987c1ed}\label{_m_n_v_i_c__interface_8h_abe12b50199d48a88648d81678987c1ed} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_SetPriorityGrouping@{MNVIC\_SetPriorityGrouping}}
+\index{MNVIC\_SetPriorityGrouping@{MNVIC\_SetPriorityGrouping}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_SetPriorityGrouping()}{MNVIC\_SetPriorityGrouping()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+Set\+Priority\+Grouping (\begin{DoxyParamCaption}\item[{u32}]{Copy\+U8\+Grouping\+Options }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+Set\+Priority\+Grouping\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Set the Grouping and Sub\+Grouping Options.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x01\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Copy\+U8\+Grouping\+Options} & (u32)\textbackslash{}\+Grouping Option selected by user \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Select NVIC number of Groups and Sub\+Groups.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_51}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_52}}
+\end{DoxyImageNoCaption}
+ \Hypertarget{_m_n_v_i_c__interface_8h_afd98f352747fc3a3233aac95f9fef951}\label{_m_n_v_i_c__interface_8h_afd98f352747fc3a3233aac95f9fef951} 
+\index{MNVIC\_interface.h@{MNVIC\_interface.h}!MNVIC\_SystemReset@{MNVIC\_SystemReset}}
+\index{MNVIC\_SystemReset@{MNVIC\_SystemReset}!MNVIC\_interface.h@{MNVIC\_interface.h}}
+\doxysubsubsection{\texorpdfstring{MNVIC\_SystemReset()}{MNVIC\_SystemReset()}}
+{\footnotesize\ttfamily void MNVIC\+\_\+\+System\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_m_n_v_i_c__prg_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{_m_n_v_i_c__prg_8c_Service_Name}
+MNVIC\+\_\+\+System\+Reset\hypertarget{_m_n_v_i_c__prg_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{_m_n_v_i_c__prg_8c_Description}
+Reset NVIC System.\hypertarget{_m_n_v_i_c__prg_8c_Req_ID}{}\doxysubsection{\texorpdfstring{Req\+\_\+\+ID}{Req\_ID}}\label{_m_n_v_i_c__prg_8c_Req_ID}
+NVIC\+\_\+0x09\hypertarget{_m_n_v_i_c__prg_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{_m_n_v_i_c__prg_8c_Sync_Async}
+Synchronous\hypertarget{_m_n_v_i_c__prg_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{_m_n_v_i_c__prg_8c_Renterancy}
+Reentrant\hypertarget{_m_n_v_i_c__prg_8c_Parameters}{}\doxysubsection{\texorpdfstring{Parameters}{Parameters}}\label{_m_n_v_i_c__prg_8c_Parameters}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em None} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_n_v_i_c__prg_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{_m_n_v_i_c__prg_8c_Return_value}
+None\hypertarget{_m_n_v_i_c__prg_8c_Rational}{}\doxysubsection{\texorpdfstring{Rational}{Rational}}\label{_m_n_v_i_c__prg_8c_Rational}
+Reset System.\hypertarget{_m_n_v_i_c__prg_8c_Activity_Diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+\+Diagram}{Activity\_Diagram}}\label{_m_n_v_i_c__prg_8c_Activity_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_57}}
+\end{DoxyImageNoCaption}
+\hypertarget{_m_n_v_i_c__prg_8c_Sequence_Diagram}{}\doxysubsection{\texorpdfstring{Sequence\+\_\+\+Diagram}{Sequence\_Diagram}}\label{_m_n_v_i_c__prg_8c_Sequence_Diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_58}}
+\end{DoxyImageNoCaption}
+ 

@@ -1,0 +1,106 @@
+@startuml inline_umlgraph_1.png
+  start
+  :Make First delay of 2ms;
+  :Creat Local variable to send data to Queue DesicionMessage;
+  :Initialize DesicionMessage;
+  :Wait For Notications for maximum time;
+  switch (What is user's DesicionMessage?)
+   case (1)
+   :LED Task Notify;
+   case (2)
+   :LCD Task Notify;
+   endswitch
+   :Action Task will be suspended;
+  stop
+@enduml
+@startuml inline_umlgraph_2.png
+"ActionTask" <[#blue]-- "MangementTask" : TaskNotifyTake
+"ActionTask" <[#blue]-- "Queue" : Recieve Mode Selected from Queue 
+"ActionTask" -> "LcdTask" : Notify LCD to operate
+"ActionTask"-> "LedTask" : Notify LED to operate
+@enduml
+@startuml inline_umlgraph_7.png
+  start
+  :Make First delay of 3ms;
+  :Wait for notification from Action Task;
+  :Transmit String through Uart;
+  :Action Task will be Resumeed;
+  :Manage Task will be Resumeed;
+  stop
+@enduml
+@startuml inline_umlgraph_8.png
+"LEDTask" <[#blue]-- "ActionTask" : TaskNotifyTake
+"LEDTask" -[#red]> "USART" :  Enter String: 
+"LEDTask" <[#blue]-- "USART" : Recieve String
+"LEDTask" -[#green]> "LCD_SendString" : Display The String  
+"LEDTask" -> "ManageTask" : Resume Task
+"LEDTask"-> "ActionTask" : Resume Task
+@enduml
+@startuml inline_umlgraph_13.png
+  start
+  :Make First delay of 3ms;
+  :Creat Local variable to send data to Queue LEDMessage;
+  :Initialize UartRecieve;
+  :Wait for notification from Action Task;
+  :Transmit prompt message;
+   while (LEDMessage != '1' && LEDMessage != '2' && LEDMessage != '3' && LEDMessage != '4')
+  :Receive byte from UART3;
+  endwhile (loop)
+  switch (What is user's LEDMessage?)
+  case (1)
+  :Green Led ON;
+  case (2)
+  :Blue LED ON;
+    case (3)
+  :Red LED ON;
+  case (4)
+  :White LED ON;
+  endswitch
+  :Action Task will be Resumeed;
+  :Manage Task will be suspended;
+  stop
+@enduml
+@startuml inline_umlgraph_14.png
+"LEDTask" <[#blue]-- "ActionTask" : TaskNotifyTake
+"LEDTask" -[#red]> "USART" :  Choose LED [1:4] 
+"LEDTask" <[#blue]-- "USART" : Recieve LED Shape Selected by user
+"LEDTask" -[#red]> "USART" :  Send Selected Led Colour
+"LEDTask" -[#green]> "Dio_WriteChannel" : Enlight the selected Led  
+"LEDTask" -> "ManageTask" : Resume Task
+"LEDTask"-> "ActionTask" : Resume Task
+@enduml
+@startuml inline_umlgraph_19.png
+  start
+  :Make First delay of 1ms;
+  :Creat Local variable to send data to Queue UartRecieve;
+  :Initialize UartRecieve;
+  :Transmit prompt message;
+  while (UartRecieve != '1' && UartRecieve != '2')
+  :Receive byte from UART3;
+  endwhile (loop)
+  :Send data to MainQueue;
+  :Notify ActionHandler;
+  :Mangment Task will be suspended;
+  stop 
+@enduml
+@startuml inline_umlgraph_20.png
+"MangementTask" <-- "USART" : Recieve User ModeSelected 
+"MangementTask"-> "Queue" : Store Recieved Mode
+"MangementTask" -[#red]> "ActionTask" : TaskNotify
+@enduml
+@startuml inline_umlgraph_25.png
+json "<b>Creation" as J {
+"Name": "Ahmed Sayed - Alaa Youssif",
+"Date": "13/9/2023",
+"File": "RTOS System Project",
+"Version": "V2.1"
+}
+@enduml
+@startuml inline_umlgraph_26.png
+json "<b>Refrences" as J {
+"First refrence": "Reference manual STM32F103xx",
+"Second refrence": "Programming manual Cortex®-M3 ",
+"Third refrence": "freeRTOS.org ",
+"Fourth refrence": "plantuml.com"
+}
+@enduml

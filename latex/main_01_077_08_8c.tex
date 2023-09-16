@@ -1,0 +1,193 @@
+\doxysection{Source\+Code/main (7).c File Reference}
+\hypertarget{main_01_077_08_8c}{}\label{main_01_077_08_8c}\index{SourceCode/main (7).c@{SourceCode/main (7).c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \"{}MCU\+\_\+\+Interface.\+h\"{}}\newline
+{\ttfamily \#include \"{}Free\+RTOS.\+h\"{}}\newline
+{\ttfamily \#include \"{}task.\+h\"{}}\newline
+{\ttfamily \#include \"{}LCD\+\_\+\+Interface.\+h\"{}}\newline
+{\ttfamily \#include \"{}Port\+\_\+\+Interface.\+h\"{}}\newline
+{\ttfamily \#include \"{}DIO\+\_\+\+Interface.\+h\"{}}\newline
+{\ttfamily \#include \"{}UART\+\_\+\+Interface.\+h\"{}}\newline
+{\ttfamily \#include \"{}queue.\+h\"{}}\newline
+Include dependency graph for main (7).c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_01_077_08_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_01_077_08_8c_a568888e58c005baec77bd4b4afea0d49}{Mangment\+Task\+\_\+\+Func}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_01_077_08_8c_a465cc0d48130e0dbccea0b43d4aaf16c}{Action\+Task\+\_\+\+Func}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_01_077_08_8c_a58b322a53c745a8e4442c21080731f21}{LCDTask\+\_\+\+Func}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_01_077_08_8c_a65dfa349dac036ac78a30a5207c727bc}{LEDTask\+\_\+\+Func}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+int \mbox{\hyperlink{main_01_077_08_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_01_077_08_8c_a423503c7396e600c00ab48812486f8e8}{Manage\+Handler}}
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_01_077_08_8c_a568a26953996bb0b779a5f4e84980b24}{Action\+Handler}}
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_01_077_08_8c_a4a47030b8868a67c0cfa1d9c33dc4e22}{LCDHandler}}
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_01_077_08_8c_a000f821172f2e5e87010d53fbd87ecbf}{LEDHandler}}
+\item 
+Queue\+Handle\+\_\+t \mbox{\hyperlink{main_01_077_08_8c_a64b42ae6f9a1c03ca69e43f71a7f040e}{Main\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_01_077_08_8c_a465cc0d48130e0dbccea0b43d4aaf16c}\label{main_01_077_08_8c_a465cc0d48130e0dbccea0b43d4aaf16c} 
+\index{main (7).c@{main (7).c}!ActionTask\_Func@{ActionTask\_Func}}
+\index{ActionTask\_Func@{ActionTask\_Func}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{ActionTask\_Func()}{ActionTask\_Func()}}
+{\footnotesize\ttfamily void Action\+Task\+\_\+\+Func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+\hypertarget{main_01_077_08_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{main_01_077_08_8c_Service_Name}
+Action\+Task\+\_\+\+Func\hypertarget{main_01_077_08_8c_Service_ID_hex}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+ID\+\_\+hex}{Service\_ID\_hex}}\label{main_01_077_08_8c_Service_ID_hex}
+0x02\hypertarget{main_01_077_08_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{main_01_077_08_8c_Sync_Async}
+Synchronous\hypertarget{main_01_077_08_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{main_01_077_08_8c_Renterancy}
+Reentrant\hypertarget{main_01_077_08_8c_Parameters_in}{}\doxysubsection{\texorpdfstring{Parameters\+\_\+in}{Parameters\_in}}\label{main_01_077_08_8c_Parameters_in}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em void} & \texorpdfstring{$\ast$}{*}pv\+Parameters---\texorpdfstring{$>$}{>}A value that is passed as the paramater to the created task. \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+ & {\em \mbox{[}in-\/out\mbox{]}} & None\\
+\hline
+\end{DoxyParams}
+\hypertarget{main_01_077_08_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{main_01_077_08_8c_Return_value}
+None\hypertarget{main_01_077_08_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{main_01_077_08_8c_Description}
+It receives decision messages from a queue and performing specific tasks based on the received message \&notifying either the LEDHandler or LCDHandler tasks.\hypertarget{main_01_077_08_8c_Activity_diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+diagram}{Activity\_diagram}}\label{main_01_077_08_8c_Activity_diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_2}}
+\end{DoxyImageNoCaption}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{main_01_077_08_8c_a465cc0d48130e0dbccea0b43d4aaf16c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_01_077_08_8c_a58b322a53c745a8e4442c21080731f21}\label{main_01_077_08_8c_a58b322a53c745a8e4442c21080731f21} 
+\index{main (7).c@{main (7).c}!LCDTask\_Func@{LCDTask\_Func}}
+\index{LCDTask\_Func@{LCDTask\_Func}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{LCDTask\_Func()}{LCDTask\_Func()}}
+{\footnotesize\ttfamily void LCDTask\+\_\+\+Func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{main_01_077_08_8c_a58b322a53c745a8e4442c21080731f21_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_01_077_08_8c_a65dfa349dac036ac78a30a5207c727bc}\label{main_01_077_08_8c_a65dfa349dac036ac78a30a5207c727bc} 
+\index{main (7).c@{main (7).c}!LEDTask\_Func@{LEDTask\_Func}}
+\index{LEDTask\_Func@{LEDTask\_Func}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{LEDTask\_Func()}{LEDTask\_Func()}}
+{\footnotesize\ttfamily void LEDTask\+\_\+\+Func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{main_01_077_08_8c_a65dfa349dac036ac78a30a5207c727bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_01_077_08_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_01_077_08_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main (7).c@{main (7).c}!main@{main}}
+\index{main@{main}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{main_01_077_08_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_01_077_08_8c_a568888e58c005baec77bd4b4afea0d49}\label{main_01_077_08_8c_a568888e58c005baec77bd4b4afea0d49} 
+\index{main (7).c@{main (7).c}!MangmentTask\_Func@{MangmentTask\_Func}}
+\index{MangmentTask\_Func@{MangmentTask\_Func}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{MangmentTask\_Func()}{MangmentTask\_Func()}}
+{\footnotesize\ttfamily void Mangment\+Task\+\_\+\+Func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+\hypertarget{main_01_077_08_8c_Service_Name}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+Name}{Service\_Name}}\label{main_01_077_08_8c_Service_Name}
+Mangment\+Task\+\_\+\+Func\hypertarget{main_01_077_08_8c_Service_ID_hex}{}\doxysubsection{\texorpdfstring{Service\+\_\+\+ID\+\_\+hex}{Service\_ID\_hex}}\label{main_01_077_08_8c_Service_ID_hex}
+0x01\hypertarget{main_01_077_08_8c_Sync_Async}{}\doxysubsection{\texorpdfstring{Sync\+\_\+\+Async}{Sync\_Async}}\label{main_01_077_08_8c_Sync_Async}
+Synchronous\hypertarget{main_01_077_08_8c_Renterancy}{}\doxysubsection{\texorpdfstring{Renterancy}{Renterancy}}\label{main_01_077_08_8c_Renterancy}
+Reentrant\hypertarget{main_01_077_08_8c_Parameters_in}{}\doxysubsection{\texorpdfstring{Parameters\+\_\+in}{Parameters\_in}}\label{main_01_077_08_8c_Parameters_in}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em void} & \texorpdfstring{$\ast$}{*}pv\+Parameters---\texorpdfstring{$>$}{>}A value that is passed as the paramater to the created task. \\
+\hline
+\mbox{\texttt{ out}}  & {\em None} & \\
+\hline
+ & {\em \mbox{[}in-\/out\mbox{]}} & None\\
+\hline
+\end{DoxyParams}
+\hypertarget{main_01_077_08_8c_Return_value}{}\doxysubsection{\texorpdfstring{Return\+\_\+value}{Return\_value}}\label{main_01_077_08_8c_Return_value}
+None\hypertarget{main_01_077_08_8c_Description}{}\doxysubsection{\texorpdfstring{Description}{Description}}\label{main_01_077_08_8c_Description}
+It prompts the user to choose between LED Mode and LCD Mode, sends the chosen option to a queue, and notifies the Action Task to start processing.\hypertarget{main_01_077_08_8c_Activity_diagram}{}\doxysubsection{\texorpdfstring{Activity\+\_\+diagram}{Activity\_diagram}}\label{main_01_077_08_8c_Activity_diagram}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_5}}
+\end{DoxyImageNoCaption}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{main_01_077_08_8c_a568888e58c005baec77bd4b4afea0d49_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_01_077_08_8c_a568a26953996bb0b779a5f4e84980b24}\label{main_01_077_08_8c_a568a26953996bb0b779a5f4e84980b24} 
+\index{main (7).c@{main (7).c}!ActionHandler@{ActionHandler}}
+\index{ActionHandler@{ActionHandler}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{ActionHandler}{ActionHandler}}
+{\footnotesize\ttfamily Task\+Handle\+\_\+t Action\+Handler}
+
+\Hypertarget{main_01_077_08_8c_a4a47030b8868a67c0cfa1d9c33dc4e22}\label{main_01_077_08_8c_a4a47030b8868a67c0cfa1d9c33dc4e22} 
+\index{main (7).c@{main (7).c}!LCDHandler@{LCDHandler}}
+\index{LCDHandler@{LCDHandler}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{LCDHandler}{LCDHandler}}
+{\footnotesize\ttfamily Task\+Handle\+\_\+t LCDHandler}
+
+\Hypertarget{main_01_077_08_8c_a000f821172f2e5e87010d53fbd87ecbf}\label{main_01_077_08_8c_a000f821172f2e5e87010d53fbd87ecbf} 
+\index{main (7).c@{main (7).c}!LEDHandler@{LEDHandler}}
+\index{LEDHandler@{LEDHandler}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{LEDHandler}{LEDHandler}}
+{\footnotesize\ttfamily Task\+Handle\+\_\+t LEDHandler}
+
+\Hypertarget{main_01_077_08_8c_a64b42ae6f9a1c03ca69e43f71a7f040e}\label{main_01_077_08_8c_a64b42ae6f9a1c03ca69e43f71a7f040e} 
+\index{main (7).c@{main (7).c}!MainQueue@{MainQueue}}
+\index{MainQueue@{MainQueue}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{MainQueue}{MainQueue}}
+{\footnotesize\ttfamily Queue\+Handle\+\_\+t Main\+Queue}
+
+\Hypertarget{main_01_077_08_8c_a423503c7396e600c00ab48812486f8e8}\label{main_01_077_08_8c_a423503c7396e600c00ab48812486f8e8} 
+\index{main (7).c@{main (7).c}!ManageHandler@{ManageHandler}}
+\index{ManageHandler@{ManageHandler}!main (7).c@{main (7).c}}
+\doxysubsubsection{\texorpdfstring{ManageHandler}{ManageHandler}}
+{\footnotesize\ttfamily Task\+Handle\+\_\+t Manage\+Handler}
+
